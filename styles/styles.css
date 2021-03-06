@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+html, body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    background: #222;
+    overflow-y: hidden;
+}   
+
+div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transition: all .5s ease-in-out;
+    z-index: 1;
+}
+
+div span {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: capitalize;
+    filter: contrast(80%);
+    cursor: pointer;
+    color: #1cfb15;
+    transition: all .2s ease-in-out;
+}
+
+div span::before {
+    content: var(--l);
+    position: absolute;
+    filter: blur(10px);
+}
+
+div:hover {
+    transform: translateY(-25px);
+}
+
+div span:hover {
+    filter: contrast(150%);
+}
+
+canvas {
+    width: 100%;
+    z-index: -1;
+}
